@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uniplay — Course Creation v5</title>
+<link rel="stylesheet" href="course-creation-prototype.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-logo"><svg viewBox="0 0 984 234" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M129 40.1169C123.542 40.1169 119.117 44.5417 119.117 50C119.117 55.4583 123.542 59.8831 129 59.8831C134.458 59.8831 138.883 55.4583 138.883 50C138.883 44.5417 134.458 40.1169 129 40.1169ZM88 50C88 27.3563 106.356 9 129 9C151.644 9 170 27.3563 170 50C170 72.6437 151.644 91 129 91C106.356 91 88 72.6437 88 50Z" fill="#FF613F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M141.111 177L88 123.991L88 95L116.889 95L170 148.009L170 177L141.111 177Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M141.111 177L88 123.991L88 95L116.889 95L170 148.009L170 177L141.111 177Z" fill="black" fill-opacity="0.2"/><ellipse cx="22.2921" cy="115.293" rx="20.2921" ry="20.2929" fill="#FFC700"/><ellipse cx="22.2921" cy="156.707" rx="20.2921" ry="20.2929" fill="#FFC700"/><ellipse cx="63.7081" cy="115.293" rx="20.2921" ry="20.2929" fill="#FFC700"/><ellipse cx="63.7081" cy="156.707" rx="20.2921" ry="20.2929" fill="#FFC700"/><path fill-rule="evenodd" clip-rule="evenodd" d="M78.8566 85.8873C71.5808 93.1292 59.7844 93.1292 52.5086 85.8873L7.48315 41.0715C0.207339 33.8295 0.207335 22.088 7.48315 14.8461C14.759 7.60414 26.5554 7.60415 33.8312 14.8461L78.8566 59.6619C86.1324 66.9039 86.1324 78.6454 78.8566 85.8873Z" fill="#2E98FF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.48321 85.8873C14.759 93.1292 26.5554 93.1292 33.8312 85.8873L78.8567 41.0715C86.1325 33.8295 86.1325 22.088 78.8567 14.8461C71.5809 7.60414 59.7845 7.60415 52.5087 14.8461L7.4832 59.6619C0.207394 66.9039 0.207395 78.6454 7.48321 85.8873Z" fill="#2E98FF"/><path d="M862.792 196.757C890.327 203.557 898.974 194.994 905.773 173L858.763 50.772H880.589L916.771 150.166L957.234 50.772H979.06L925.837 176.526C912.825 204.145 907.117 223.453 862.792 216.653V196.757Z" fill="black"/><path d="M787.377 176.358C764.207 176.358 746.578 162.003 746.578 137.742C746.578 115.832 760.597 104.918 784.271 102.4L829.77 97.5309V86.7016C829.77 71.591 816.926 65.5468 799.381 65.5468C783.683 65.5468 773.441 72.6824 771.679 86.3659H751.867C753.798 62.2728 773.022 47.4141 799.213 47.4141C831.701 47.4141 849.834 62.4407 849.834 87.8769V173H832.373L830.946 150.67C826.832 160.24 814.66 176.358 787.377 176.358ZM766.726 138.581C766.726 150.586 776.044 158.393 791.826 158.393C815.583 158.393 829.686 146.892 829.686 131.278V113.733L790.483 117.846C774.533 119.525 766.726 123.387 766.726 138.581Z" fill="black"/><path d="M707.407 173V1.07471H727.555V173H707.407Z" fill="black"/><path d="M571.886 215.981V50.772H589.347L591.53 74.5292C599.505 57.7396 614.699 47.4141 635.854 47.4141C665.655 47.4141 688.573 74.1095 688.573 111.886C688.573 149.495 665.823 175.938 636.19 175.938C615.287 175.938 600.176 166.536 592.033 151.258V215.981H571.886ZM592.033 124.226C593.208 145.381 607.564 158.477 629.726 158.477C653.147 158.477 668.426 140.344 668.426 111.55C668.426 83.3437 653.147 65.6307 629.726 65.6307C607.564 65.6307 593.208 79.65 592.033 102.232V124.226Z" fill="black"/><path d="M526.167 173V50.7719H546.314V173H526.167ZM525.159 29.2812V1.15869H547.321V29.2812H525.159Z" fill="black"/><path d="M393.877 173V50.772H411.338L413.605 77.4674C421.916 58.9149 437.782 47.4141 457.593 47.4141C482.778 47.4141 500.491 66.9739 500.491 94.7606V173H480.343V98.1185C480.343 78.139 469.598 65.5468 452.556 65.5468C428.883 65.5468 414.024 82.4203 414.024 109.2V173H393.877Z" fill="black"/><path d="M302.763 176.358C264.483 176.358 236.444 150.334 236.444 112.725V7.79053H257.263V114.068C257.263 139.924 276.571 157.553 302.763 157.553C328.955 157.553 348.263 139.924 348.263 114.068V7.79053H369.082V112.725C369.082 150.334 341.043 176.358 302.763 176.358Z" fill="black"/></svg></div>
+    <a class="topbar-back" id="backBtn">‹ Courses</a>
+  </div>
+  <div class="topbar-right"><div class="topbar-space"><span>≡</span> Avaliano's space <div class="topbar-space-dot"></div></div></div>
+</div>
+
+<div class="hero" id="hero">
+  <h1 class="greeting">Good day, Jenny</h1>
+  <p class="subtitle">What should your learners know?</p>
+  <div class="hero-input-container">
+    <div class="hero-input-card">
+      <input type="text" class="hero-input" id="heroInput" placeholder="A topic, a goal, or a full brief…" autocomplete="off" />
+      <button class="send-btn" id="heroSend" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    </div>
+    <div class="hint-bar" id="hintBar"><span style="width:18px;height:18px;border-radius:50%;border:1.5px solid var(--g500);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;margin-right:8px;">i</span>For better results, narrow your topic</div>
+  </div>
+</div>
+
+<div class="workspace" id="workspace">
+  <div class="sidebar">
+    <div class="sidebar-cover"><div class="sidebar-cover-pattern" id="coverPattern"></div></div>
+    <textarea class="course-name-editable" id="courseName" placeholder="Course name…" rows="1"></textarea>
+    <div class="sidebar-meta">New course by Jenny</div>
+    <div class="sidebar-edit-row"><div class="sidebar-edit-icon">✎</div><div class="sidebar-edit-icon">⌄</div></div>
+    <div class="step-list">
+      <div class="step-item active" id="step-1"><div class="step-num"><span class="step-number">1</span><span class="step-check">✓</span></div> Topic</div>
+      <div class="step-item" id="step-2"><div class="step-num"><span class="step-number">2</span><span class="step-check">✓</span></div> Sources</div>
+      <div class="step-item" id="step-3"><div class="step-num"><span class="step-number">3</span><span class="step-check">✓</span></div> Levels</div>
+    </div>
+    <div class="brief-sidebar" id="briefSidebar">
+      <div class="brief-sidebar-header"><div class="brief-sidebar-title">Course Brief</div><button class="brief-edit-btn" id="briefEditBtn" onclick="toggleBriefEdit()">✎ Edit</button></div>
+      <div class="brief-row" data-field="topic"><span class="brief-label">Topic</span><span class="brief-val pending" id="sb-topic">—</span></div>
+      <div class="brief-row" data-field="audience"><span class="brief-label">Audience</span><span class="brief-val pending" id="sb-audience">—</span></div>
+      <div class="brief-row" data-field="level"><span class="brief-label">Current knowledge</span><span class="brief-val pending" id="sb-level">—</span></div>
+      <div class="brief-row" data-field="goals"><span class="brief-label">Learning outcome</span><span class="brief-val pending" id="sb-goals">—</span></div>
+    </div>
+  </div>
+  <div class="main-pane"><div class="agent-flow" id="agentFlow"></div></div>
+</div>
+
+<div class="floating-input" id="floatingInput">
+  <div class="floating-input-card">
+    <input type="text" class="floating-field" id="agentInput" placeholder="Type or pick above…" autocomplete="off" />
+    <button class="send-btn" id="agentSend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  </div>
+</div>
+
+<div class="step-dots" id="stepDots">
+  <div class="step-dot active" data-step="1"></div>
+  <div class="step-dot" data-step="2"></div>
+  <div class="step-dot" data-step="3"></div>
+</div>
+
+<!-- ═══ ADD SOURCES MODAL ═══ -->
+<div class="modal-overlay" id="sourcesModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">Add Sources</span>
+      <button class="modal-close" onclick="closeSourcesModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-upload" onclick="simUpload()">
+        <div class="modal-upload-icon">↑</div>
+        <div class="modal-upload-text">Drag and drop files here</div>
+        <div class="modal-upload-sub">or</div>
+        <button class="modal-upload-btn" onclick="event.stopPropagation();simUpload()">Browse files</button>
+        <div class="modal-formats">Supported formats: PDF</div>
+      </div>
+      <div class="modal-inputs">
+        <div class="modal-input-card">
+          <h4>Website</h4>
+          <p>Add a webpage containing relevant information</p>
+          <div class="modal-url-row">
+            <input type="text" id="modalUrlInput" placeholder="Enter URL" />
+            <button class="modal-url-add" onclick="addModalUrl()">Add</button>
+          </div>
+        </div>
+        <div class="modal-input-card">
+          <h4>Paste</h4>
+          <p>Paste text content that will be used in your course.</p>
+          <div class="modal-url-row">
+            <input type="text" id="modalPasteInput" placeholder="Text" />
+            <button class="modal-url-add" onclick="addModalPaste()">Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-added" id="modalAdded" style="display:none;">
+        <div class="modal-added-title">Added Content (<span id="modalSourceCount">0</span>)</div>
+        <div id="modalSourceList"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-cancel" onclick="closeSourcesModal()">Cancel</button>
+      <button class="modal-done" id="modalDoneBtn" onclick="doneAddingSources()" disabled>Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const brief = { topic: null, audience: null, level: null, goals: null };
+let currentStep = 0, currentQuestion = null, sources = [], levels = [], deletedLevels = [], briefEditing = false, sourceFlow = null;
+const $ = id => document.getElementById(id);
+const hero=$('hero'), heroInput=$('heroInput'), heroSend=$('heroSend'), hintBar=$('hintBar'),
+  workspace=$('workspace'), agentFlow=$('agentFlow'), agentInput=$('agentInput'), agentSend=$('agentSend'),
+  floatingInput=$('floatingInput'), backBtn=$('backBtn'), courseName=$('courseName'),
+  briefSidebar=$('briefSidebar'), stepDots=$('stepDots'), coverPattern=$('coverPattern');
+
+// ── HERO ──
+heroInput.addEventListener('input', () => {
+  const v=heroInput.value.trim(); heroSend.disabled=!v;
+  hintBar.classList.toggle('visible', v.split(/\s+/).filter(Boolean).length<=2 && v.length>0);
+});
+heroInput.addEventListener('keydown', e => { if(e.key==='Enter'&&heroInput.value.trim()) submitHero(); });
+heroSend.addEventListener('click', () => { if(heroInput.value.trim()) submitHero(); });
+
+function submitHero() {
+  const text=heroInput.value.trim(), parsed=parseInput(text);
+  hero.classList.add('hidden'); workspace.classList.add('active'); floatingInput.classList.add('visible');
+  backBtn.classList.add('visible'); stepDots.classList.add('visible'); currentStep=1; updateSteps();
+  if(parsed.topic) setBrief('topic',parsed.topic);
+  if(parsed.audience) setBrief('audience',parsed.audience);
+  if(parsed.level) setBrief('level',parsed.level);
+  if(parsed.goals) setBrief('goals',parsed.goals);
+  courseName.value=genName(parsed.topic,parsed.level);
+  coverPattern.textContent=genPattern(); briefSidebar.classList.add('visible');
+  addUserBlock(text);
+  const filled=['topic','audience','level','goals'].filter(f=>brief[f]).length;
+  setTimeout(()=>{
+    if(filled>=3) { const m=getMissing(); if(!m.length){addAgentBlock("Brief complete. Let's add your source material."); setTimeout(()=>startSourcesPhase(),1000);} else {const q=getQ(m[0]); addAgentBlock(q.text,q.chips,null,true); currentQuestion=m[0];} }
+    else { const m=getMissing(); if(m.length){const q=getQ(m[0]); addAgentBlock((parsed.topic?`Got it — ${parsed.topic}. `:'')+q.text,q.chips,null,true); currentQuestion=m[0];} }
+  },500);
+  setTimeout(()=>agentInput.focus(),700);
+}
+
+// ── AGENT INPUT ──
+agentSend.addEventListener('click', handleSend);
+agentInput.addEventListener('keydown', e=>{if(e.key==='Enter')handleSend();});
+
+function handleSend() {
+  const text=agentInput.value.trim(); if(!text)return; agentInput.value=''; addUserBlock(text);
+  if(currentStep===3&&levels.length>0){handleOutlineCmd(text);return;}
+  if(currentQuestion&&currentStep===1){setBrief(currentQuestion,text);currentQuestion=null;}
+  setTimeout(()=>{
+    if(currentStep!==1)return;
+    const m=getMissing();
+    if(m.length>0){
+      if(m.includes('level')&&brief.audience){const inf=inferLevel(brief.audience);if(inf){setBrief('level',inf);const r=getMissing();if(r.length){const q=getQ(r[0]);addAgentBlock(`Since it's for ${brief.audience}, I've set current knowledge to "${inf}". `+q.text,q.chips,null,true);currentQuestion=r[0];}else{addAgentBlock(`Current knowledge set to "${inf}". Brief complete.`);setTimeout(()=>startSourcesPhase(),1000);}return;}}
+      const q=getQ(m[0]); addAgentBlock(q.text,q.chips,null,true); currentQuestion=m[0];
+    } else {addAgentBlock("Brief complete. Let's add your source material."); setTimeout(()=>startSourcesPhase(),1000);}
+  },500);
+}
+
+function handleChipClick(v) {
+  if(currentQuestion&&currentStep===1){
+    setBrief(currentQuestion,v); addUserBlock(v); currentQuestion=null;
+    setTimeout(()=>{
+      const m=getMissing();
+      if(m.includes('level')&&brief.audience){const inf=inferLevel(brief.audience);if(inf){setBrief('level',inf);updateName();const r=getMissing();if(r.length){const q=getQ(r[0]);addAgentBlock(`Since it's for ${brief.audience}, I've set current knowledge to "${inf}". `+q.text,q.chips,null,true);currentQuestion=r[0];}else{addAgentBlock(`Current knowledge set to "${inf}". Brief complete.`);setTimeout(()=>startSourcesPhase(),1000);}return;}}
+      if(m.length){const q=getQ(m[0]);addAgentBlock(q.text,q.chips,null,true);currentQuestion=m[0];}
+      else{addAgentBlock("Brief complete. Let's add your source material.");setTimeout(()=>startSourcesPhase(),1000);}
+    },500);
+  } else if(currentStep===2){
+    addUserBlock(v);
+    if(v==="I'll add sources"){sourceFlow='manual';setTimeout(()=>openSourcesModal(),400);}
+    else if(v==='Find information for me'){sourceFlow='llm';setTimeout(()=>{addAgentBlock("Based on your brief, here's a suggested level outline.");setTimeout(()=>{currentStep=3;updateSteps();showOutline(genLevels());},900);},400);}
+  }
+}
+
+function inferLevel(aud){const a=aud.toLowerCase();if(/new hire|junior|intern|entry/.test(a))return'No prior knowledge';if(/manager|senior|lead|director/.test(a))return'Working experience';return null;}
+
+// ── SOURCES PHASE ──
+function startSourcesPhase(){currentStep=2;updateSteps();agentInput.placeholder='Type anything…';addAgentBlock("How do you want to add content?",null,[{label:"I'll add sources",value:"I'll add sources"},{label:"Find information for me",value:"Find information for me",sub:"We'll gather it from leading AI models ✦"}]);}
+
+// ── SOURCES MODAL ──
+function openSourcesModal(){$('sourcesModal').classList.add('active');renderModalSources();}
+function closeSourcesModal(){$('sourcesModal').classList.remove('active');}
+function simUpload(){sources.push({type:'file',name:'training-manual-2024.pdf',id:Date.now()});renderModalSources();}
+function addModalUrl(){const i=$('modalUrlInput'),v=i.value.trim();if(!v)return;sources.push({type:'url',name:v,id:Date.now()});i.value='';renderModalSources();}
+function addModalPaste(){const i=$('modalPasteInput'),v=i.value.trim();if(!v)return;sources.push({type:'text',name:v.substring(0,50)+(v.length>50?'…':''),id:Date.now()});i.value='';renderModalSources();}
+function removeModalSource(id){sources=sources.filter(s=>s.id!==id);renderModalSources();}
+function renderModalSources(){
+  const list=$('modalSourceList'),count=$('modalSourceCount'),container=$('modalAdded'),done=$('modalDoneBtn');
+  container.style.display=sources.length?'block':'none'; count.textContent=sources.length;
+  done.disabled=!sources.length;
+  const icons={file:'📄',url:'🌐',text:'📋'};
+  list.innerHTML=sources.map(s=>`<div class="modal-added-item"><div class="modal-added-item-left"><span>${icons[s.type]||'📄'}</span><span class="modal-added-item-name">${s.name}</span></div><span class="modal-added-item-remove" onclick="removeModalSource(${s.id})">×</span></div>`).join('');
+}
+function doneAddingSources(){
+  closeSourcesModal();
+  const n=sources.length;
+  addAgentBlock(`${n} source${n>1?'s':''} added. Here's a suggested level outline based on your brief and sources.`);
+  setTimeout(()=>{currentStep=3;updateSteps();showOutline(genLevels());},900);
+}
+
+// ── LEVEL OUTLINE ──
+function genLevels(){
+  const t=brief.topic||'Topic',l=brief.level||'Some basics';
+  const tpl={
+    'No prior knowledge':[{name:`What is ${t}?`,desc:'Core definitions'},{name:`${t} Basics`,desc:'Foundational principles'},{name:`${t} in Practice`,desc:'Hands-on application'}],
+    'Some basics':[{name:`${t} Foundations`,desc:'Key concepts'},{name:`Applied ${t}`,desc:'Real-world scenarios'},{name:`${t} Best Practices`,desc:'Patterns and pitfalls'},{name:`${t} Assessment`,desc:'Knowledge check'}],
+    'Working experience':[{name:`${t} Deep Dive`,desc:'Advanced concepts'},{name:`${t} Strategy`,desc:'Strategic application'},{name:`${t} Edge Cases`,desc:'Complex scenarios'},{name:`${t} Mastery`,desc:'Expert assessment'}]
+  };
+  return (tpl[l]||tpl['Some basics']).map((x,i)=>({...x,id:i+1}));
+}
+function genSmartLevelName(hint){
+  const t=brief.topic||'Topic';
+  return `${t}: ${hint}`;
+}
+
+function genExpansionLevel(){
+  const t=brief.topic||'Topic';
+  const pool=[
+    {name:`${t} & Communication`,desc:'Effective communication skills'},
+    {name:`${t} Compliance`,desc:'Rules and regulations'},
+    {name:`${t} Troubleshooting`,desc:'Problem-solving techniques'},
+    {name:`${t} Tools & Resources`,desc:'Key tools and references'},
+    {name:`${t} Team Dynamics`,desc:'Collaboration and teamwork'},
+    {name:`${t} Case Studies`,desc:'Real-world examples'},
+    {name:`${t} Review & Reflection`,desc:'Self-assessment and review'},
+    {name:`${t} Leadership`,desc:'Leading with expertise'},
+    {name:`${t} Safety Protocols`,desc:'Health and safety standards'},
+    {name:`${t} Emerging Trends`,desc:'Latest developments'},
+  ];
+  const usedNames=levels.map(l=>l.name.toLowerCase());
+  return pool.find(p=>!usedNames.includes(p.name.toLowerCase())) || {name:`${t}: Additional Topics`,desc:'Supplementary material'};
+}
+
+function showOutline(newLevels){
+  levels=newLevels; agentInput.placeholder='e.g. "merge level 1 and 2" or "add a level about safety"…';
+  const existing=$('levelOutlineBlock'); if(existing)existing.remove();
+  const block=document.createElement('div'); block.className='agent-block'; block.id='levelOutlineBlock';
+  block.innerHTML=`
+    <div class="level-outline" id="levelOutlineCard">
+      <div class="level-outline-header"><span class="level-outline-title">Level Outline</span><span class="level-outline-count" id="levelCount">${levels.length} levels</span></div>
+      <div id="levelItems">${renderItems()}</div>
+    </div>
+    <div class="outline-hints">Try: <code>add level</code> · <code>add a level about safety</code> · <code>merge level 1 and 2</code> · <code>remove level 3</code> · <code>rename level 2 to Regulations</code></div>
+    <div class="outline-actions">
+      <button class="generate-btn-feed" onclick="triggerGenerate()"><span style="font-size:18px;">✦</span> Generate course</button>
+      <button class="add-sources-link" onclick="openSourcesModal()">📄 Add my own sources</button>
+    </div>`;
+  agentFlow.appendChild(block); scrollBottom();
+}
+function renderItems(){return levels.map(l=>`<div class="level-item" data-id="${l.id}"><div class="level-num">${l.id}</div><div class="level-info"><div class="level-name">${l.name}</div><div class="level-desc">${l.desc}</div></div><div class="level-delete" onclick="delLevel(${l.id})">✕</div></div>`).join('');}
+function refreshOutline(){
+  const items=$('levelItems'),count=$('levelCount'),card=$('levelOutlineCard');
+  if(items)items.innerHTML=renderItems(); if(count)count.textContent=`${levels.length} levels`;
+  if(card){card.classList.add('updated');setTimeout(()=>card.classList.remove('updated'),600);}
+  const block=$('levelOutlineBlock'); if(block)agentFlow.appendChild(block); scrollBottom();
+}
+function delLevel(id){const r=levels.find(l=>l.id===id);if(r)deletedLevels.push({name:r.name,desc:r.desc});levels=levels.filter(l=>l.id!==id);levels.forEach((l,i)=>l.id=i+1);refreshOutline();addQuiet(`Removed "${r?.name}".`);}
+
+function handleOutlineCmd(text){
+  const lo=text.toLowerCase().trim();
+  const merge=lo.match(/merge\s+level\s+(\d+)\s+and\s+(\d+)/);
+  if(merge){const a=+merge[1]-1,b=+merge[2]-1;if(levels[a]&&levels[b]){const m={name:levels[a].name+' & '+levels[b].name,desc:'Combined level',id:1};levels.splice(Math.min(a,b),1);levels.splice(Math.max(a,b)-1,1,m);levels.forEach((l,i)=>l.id=i+1);refreshOutline();addQuiet(`Merged into "${m.name}".`);}return;}
+  const rem=lo.match(/remove\s+level\s+(\d+)/);
+  if(rem){const i=+rem[1]-1;if(levels[i])delLevel(levels[i].id);return;}
+  const remOrd=lo.match(/remove\s+(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth)\s+level/);
+  if(remOrd){const ordMap={first:0,second:1,third:2,fourth:3,fifth:4,sixth:5,seventh:6,eighth:7,ninth:8,tenth:9};const i=ordMap[remOrd[1]];if(levels[i])delLevel(levels[i].id);return;}
+  // "add a level about X" — specific topic
+  const addSpecific=lo.match(/add\s+(?:a\s+)?level\s+(?:about|on|for)\s+(.+)/i);
+  if(addSpecific){const hint=addSpecific[1].trim();const name=genSmartLevelName(hint.charAt(0).toUpperCase()+hint.slice(1));levels.push({name,desc:'New level',id:levels.length+1});refreshOutline();addQuiet(`Added "${name}" as Level ${levels.length}.`);return;}
+  // Bare "add level" or "add a level" — restore deleted or expand
+  if(/^add\s+(?:a\s+)?level\s*$/i.test(lo)){
+    if(deletedLevels.length>0){
+      const restored=deletedLevels.pop();
+      levels.push({name:restored.name,desc:restored.desc,id:levels.length+1});
+      refreshOutline();
+      addQuiet(`Restored "${restored.name}" as Level ${levels.length}.`);
+    } else {
+      const newLevel=genExpansionLevel();
+      levels.push({...newLevel,id:levels.length+1});
+      refreshOutline();
+      addQuiet(`Added "${newLevel.name}" as Level ${levels.length}.`);
+    }
+    return;
+  }
+  const ren=lo.match(/rename\s+level\s+(\d+)\s+to\s+(.+)/i);
+  if(ren){const i=+ren[1]-1,n=ren[2].trim();if(levels[i]){levels[i].name=n.charAt(0).toUpperCase()+n.slice(1);refreshOutline();addQuiet(`Renamed to "${levels[i].name}".`);}return;}
+  addQuiet("Try: add level, add a level about safety, merge level 1 and 2, remove level 3, rename level 2 to Regulations.");
+}
+function addQuiet(text){const b=document.createElement('div');b.className='agent-block';b.innerHTML=`<div class="agent-sender">✦ Masterbrain</div><div class="agent-text">${text}</div>`;const o=$('levelOutlineBlock');if(o)agentFlow.insertBefore(b,o);else agentFlow.appendChild(b);scrollBottom();}
+function triggerGenerate(){addUserBlock('Generate course');currentStep=4;updateSteps();const dn=courseName.value||brief.topic;setTimeout(()=>{addAgentBlock(`Generating <strong>${dn}</strong> with ${levels.length} levels. This will take a moment…`);agentInput.placeholder='Generation in progress…';agentInput.disabled=true;},400);}
+
+// ── PARSER ──
+function parseInput(text){const ex={topic:null,audience:null,level:null,goals:null};const lo=text.toLowerCase();const ip=lo.includes('create')||lo.includes('course about')||lo.includes('course for')||lo.includes('course on')||lo.includes('teach')||lo.includes('training')||text.split(/\s+/).length>5;if(!ip){ex.topic=text;return ex;}const am=text.match(/for\s+([\w\s]+?)(?:\s+about|\s+on|\s*,|\s*\.|\s+who|\s+that|$)/i);if(am){let a=am[1].replace(/\b(about|on|regarding|with|should|they|that|who)\b.*/i,'').trim();if(a.length>2&&a.length<50)ex.audience=a;}if(/\bbeginner|intro|basic|no prior|no experience|new to\b/i.test(lo))ex.level='No prior knowledge';else if(/\bintermediate|some|familiar\b/i.test(lo))ex.level='Some basics';else if(/\badvanced|expert|senior|experienced|working knowledge\b/i.test(lo))ex.level='Working experience';const gm=text.match(/(?:should|they should|able to|goal[s]?\s*:?)\s+(.+?)(?:\.|,\s*(?:professional|casual)|$)/i)||text.match(/(?:pass|complete|achieve|master|understand)\s+(.+?)(?:\.|,|$)/i);if(gm){let g=gm[1].trim();if(g.length>3&&g.length<100)ex.goals=g.charAt(0).toUpperCase()+g.slice(1);}const tm=text.match(/(?:about|on|regarding)\s+([\w\s\-&]+?)(?:\s+for\s+|\s*,|\s*\.|\s+with|$)/i);if(tm){let t=tm[1].replace(/\b(for|with|that|they|should)\b.*/i,'').trim();if(t.length>1)ex.topic=t.charAt(0).toUpperCase()+t.slice(1);}if(!ex.topic){let fb=text.replace(/^(create|make|build)\s+(a\s+|an\s+)?/i,'').replace(/\s+(course|training)\b/i,'').replace(/\s+for\s+.*/i,'').replace(/\s*,\s*.*/i,'').trim();if(fb.length>1)ex.topic=fb.charAt(0).toUpperCase()+fb.slice(1);}return ex;}
+
+// ── BRIEF ──
+function setBrief(f,v){brief[f]=v;const el=$(`sb-${f}`);if(el){el.textContent=v;el.classList.remove('pending');el.classList.add('filled');}if(['topic','level','audience'].includes(f))updateName();}
+function getMissing(){return['audience','level','goals'].filter(f=>!brief[f]);}
+function getQ(f){switch(f){case'audience':return{text:"Who's going to take this course?",chips:['New hires','All staff','Managers','Specialists']};case'level':return{text:"How familiar is this audience with the topic today?",chips:['No prior knowledge','Some basics','Working experience']};case'goals':return{text:"What should learners be able to do after completing this?",chips:['Pass a knowledge assessment','Apply skills on the job','Earn a certification']};default:return{text:'',chips:[]};}}
+function genName(t,l){if(!t)return'';const p={'No prior knowledge':'Introduction to','Some basics':'Practical','Working experience':'Advanced'};return t.split(/\s+/).length>=4?t:`${p[l]||'Introduction to'} ${t}`;}
+function updateName(){if(courseName._userEdited)return;const n=genName(brief.topic,brief.level);if(n){courseName.value=n;autoResizeCourseName();}}
+function autoResizeCourseName(){courseName.style.height='auto';courseName.style.height=courseName.scrollHeight+'px';}
+courseName.addEventListener('input',()=>{courseName._userEdited=true;autoResizeCourseName();});
+courseName.addEventListener('focus',()=>courseName.select());
+function genPattern(){const c='░▒▓█▀▄■□▪▫●○◆◇◈◉';let s='';for(let i=0;i<300;i++)s+=c[Math.floor(Math.random()*c.length)];return s;}
+
+// ── BRIEF EDIT ──
+function toggleBriefEdit(){
+  briefEditing=!briefEditing;const btn=$('briefEditBtn'),rows=briefSidebar.querySelectorAll('.brief-row[data-field]');
+  if(briefEditing){btn.textContent='✕ Close';rows.forEach(r=>{const f=r.dataset.field,v=brief[f]||'',lab=r.querySelector('.brief-label').textContent;r.classList.add('editing');r.innerHTML=`<span class="brief-label">${lab}</span><input class="brief-edit-input" id="edit-${f}" value="${v}" placeholder="Enter ${lab.toLowerCase()}…"/><button class="brief-edit-save" onclick="saveBF('${f}')">Save</button>`;$(`edit-${f}`).addEventListener('keydown',e=>{if(e.key==='Enter')saveBF(f);});});}
+  else{btn.innerHTML='✎ Edit';rows.forEach(r=>{const f=r.dataset.field,v=brief[f],labs={topic:'Topic',audience:'Audience',level:'Current knowledge',goals:'Learning outcome'};r.classList.remove('editing');r.innerHTML=`<span class="brief-label">${labs[f]}</span><span class="brief-val ${v?'filled':'pending'}" id="sb-${f}">${v||'—'}</span>`;});}
+}
+function saveBF(f){const i=$(`edit-${f}`);if(i&&i.value.trim())setBrief(f,i.value.trim());}
+
+// ── UI BLOCKS ──
+function addAgentBlock(text,chips,opts,hint){
+  const t=document.createElement('div');t.className='agent-block';t.innerHTML='<div class="agent-sender">✦ Masterbrain</div><div class="typing-dots"><span></span><span></span><span></span></div>';agentFlow.appendChild(t);scrollBottom();
+  setTimeout(()=>{t.remove();const b=document.createElement('div');b.className='agent-block';
+    let ch='';if(chips&&chips.length){ch='<div class="chips">'+chips.map(c=>{const sc=c.replace(/'/g,"\\'");return`<button class="chip" onclick="handleChipClick('${sc}')">${c}</button>`;}).join('')+'</div>';if(hint)ch+='<div class="type-own-hint" onclick="$(\'agentInput\').focus();scrollBottom();">or type your own below ↓</div>';}
+    let op='';if(opts&&opts.length){op='<div class="option-cards">'+opts.map(o=>{const safeVal=o.value.replace(/'/g,"\\'");return`<div class="option-card" onclick="this.classList.add('selected');handleChipClick('${safeVal}')"><div class="option-radio"></div><div><div class="option-label">${o.label}</div>${o.sub?`<div style="font-size:12px;color:var(--g500);margin-top:2px;">${o.sub}</div>`:''}</div></div>`;}).join('')+'</div>';}
+    b.innerHTML=`<div class="agent-sender">✦ Masterbrain</div><div class="agent-text">${text}</div>${ch}${op}`;agentFlow.appendChild(b);scrollBottom();
+  },700);
+}
+function addUserBlock(t){const b=document.createElement('div');b.className='user-block';b.innerHTML=`<div class="user-bubble">${t}</div>`;agentFlow.appendChild(b);scrollBottom();}
+function scrollBottom(){setTimeout(()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}),50);}
+
+// ── STEPS ──
+function updateSteps(){[1,2,3].forEach(i=>{const el=$(`step-${i}`);el.classList.remove('active','done');if(i<currentStep)el.classList.add('done');else if(i===currentStep)el.classList.add('active');});document.querySelectorAll('.step-dot').forEach(d=>{const s=+d.dataset.step;d.classList.remove('active','done');if(s<currentStep)d.classList.add('done');else if(s===currentStep)d.classList.add('active');});}
+
+heroInput.focus();
+</script>
+</body>
+</html>
