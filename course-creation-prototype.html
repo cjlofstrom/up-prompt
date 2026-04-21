@@ -17,7 +17,7 @@
 </div>
 
 <div class="hero" id="hero">
-  <h1 class="greeting">Good day, Jenny</h1>
+  <h1 class="greeting">Good day, Kim</h1>
   <p class="subtitle">What should your learners know?</p>
   <div class="hero-input-container">
     <div class="hero-input-card">
@@ -110,7 +110,7 @@
 
 <script>
 const brief = { topic: null, audience: null, level: null, goals: null };
-let currentStep = 0, currentQuestion = null, sources = [], levels = [], deletedLevels = [], briefEditing = false, sourceFlow = null;
+let currentStep = 0, currentQuestion = null, sources = [], levels = [], deletedLevels = [], briefEditing = false, sourceFlow = null, nobelMode = false;
 const $ = id => document.getElementById(id);
 const hero=$('hero'), heroInput=$('heroInput'), heroSend=$('heroSend'), hintBar=$('hintBar'),
   workspace=$('workspace'), agentFlow=$('agentFlow'), agentInput=$('agentInput'), agentSend=$('agentSend'),
@@ -125,15 +125,20 @@ heroInput.addEventListener('input', () => {
 heroInput.addEventListener('keydown', e => { if(e.key==='Enter'&&heroInput.value.trim()) submitHero(); });
 heroSend.addEventListener('click', () => { if(heroInput.value.trim()) submitHero(); });
 
+function isNobelPrompt(text){return /create a comprehensive course about alfred nobel and the nobel prize/i.test(text.trim());}
+
 function submitHero() {
   const text=heroInput.value.trim(), parsed=parseInput(text);
+  nobelMode=isNobelPrompt(text);
+  if(nobelMode){parsed.topic='Alfred Nobel and the Nobel Prize';}
   hero.classList.add('hidden'); workspace.classList.add('active'); floatingInput.classList.add('visible');
   backBtn.classList.add('visible'); stepDots.classList.add('visible'); currentStep=1; updateSteps();
   if(parsed.topic) setBrief('topic',parsed.topic);
   if(parsed.audience) setBrief('audience',parsed.audience);
   if(parsed.level) setBrief('level',parsed.level);
   if(parsed.goals) setBrief('goals',parsed.goals);
-  courseName.value=genName(parsed.topic,parsed.level);
+  courseName.value=nobelMode?'The Prize That Changed the World':genName(parsed.topic,parsed.level);
+  if(nobelMode)courseName._userEdited=true;
   coverPattern.textContent=genPattern(); briefSidebar.classList.add('visible');
   addUserBlock(text);
   const filled=['topic','audience','level','goals'].filter(f=>brief[f]).length;
@@ -206,6 +211,11 @@ function doneAddingSources(){
 
 // ── LEVEL OUTLINE ──
 function genLevels(){
+  if(nobelMode){return [
+    {name:'The Genesis of the Nobel Prize',desc:"Alfred Nobel's life, inventions, and the will that started it all",id:1},
+    {name:'Establishing the Nobel Prize System',desc:'How the prize categories, committees, and selection process were formed',id:2},
+    {name:'The Modern Nobel Prize',desc:"The prize's evolution, notable laureates, and global impact today",id:3}
+  ];}
   const t=brief.topic||'Topic',l=brief.level||'Some basics';
   const tpl={
     'No prior knowledge':[{name:`What is ${t}?`,desc:'Core definitions'},{name:`${t} Basics`,desc:'Foundational principles'},{name:`${t} in Practice`,desc:'Hands-on application'}],
